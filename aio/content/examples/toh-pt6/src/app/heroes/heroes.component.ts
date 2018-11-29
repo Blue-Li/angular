@@ -24,7 +24,7 @@ export class HeroesComponent implements OnInit {
 
   // #docregion add
   add(name: string): void {
-    name = name.trim();
+    name = name.trimRight();
     if (!name) { return; }
     this.heroService.addHero({ name } as Hero)
       .subscribe(hero => {
